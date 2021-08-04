@@ -7,6 +7,7 @@ const CssMinimizerWebpackPlugin = require ('css-minimizer-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
 
+
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
 
@@ -81,7 +82,7 @@ const loaders = [{
 const plugins = () => {
     const base = [
         new HTMLWebpackPlugin({
-            template: './index.html',
+            template: './pug/pages/index.pug',
             minify: {
                 collapseWhitespace: isProd
             }
@@ -135,6 +136,10 @@ module.exports = {
     plugins: plugins(),
     module: {
         rules: [
+            {
+                test: /\.pug$/,
+                loader: "pug-loader"
+            },
             {
                 test: /\.css$/,
                 use: cssLoaders()

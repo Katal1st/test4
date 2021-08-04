@@ -11,6 +11,7 @@
  import './styles/less.less'
  import './styles/scss.scss'
  
+ 
  const post = new Post('Webpack Post Title', WebpackLogo)
  $('pre').addClass('code').html(post.toString())
 
