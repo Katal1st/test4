@@ -1,0 +1,16 @@
+{
+	"name": "concat-loader",
+	"version": "0.1.0",
+	"author": "cnhongwei",
+	"description": "concat loader module for webpack",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:cnhongwei/concat-loader.git"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://www.opensource.org/licenses/mit-license.php"
+		}
+	]
+}
