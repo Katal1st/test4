@@ -82,7 +82,7 @@ const loaders = [{
 const plugins = () => {
     const base = [
         new HTMLWebpackPlugin({
-            template: './pug/pages/index.pug',
+            template: './components/pages/index.pug',
             minify: {
                 collapseWhitespace: isProd
             }
