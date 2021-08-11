@@ -13,42 +13,44 @@ html(lang="en")
 footer 
     .footer 
         .footer-item 
-            image.footer-logo
-                include ../../assets/image/logo.svg
-                p.footer-logo Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                a(href="#").footer-logo
+                    img(src="src/assets/image/logo.svg", alt="logo")
+                p.footer-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
         .footer-item 
-            ul.footer-list 
-                h3 Навигация
-                li.footer-list__item 
+            ul.list 
+                h3.title Навигация
+                li.list-item
                     a(href="#").footer-list__link О нас
-                li.footer-list__item 
+                li.list-item
                     a(href="#").footer-list__link Новости 
-                li.footer-list__item 
+                li.list-item
                     a(href="#").footer-list__link Служба поддержки
-                li.footer-list__item 
+                li.list-item
                     a(href="#").footer-list__link Услуги
         .footer-item 
-            ul.footer-list 
-                h3 О нас
-                li.footer-list__item 
+            ul.list
+                h3.title О нас
+                li.list-item
                     a(href="#").footer-list__link О сервисе
-                li.footer-list__item 
+                li.list-item
                     a(href="#").footer-list__link Наша команда
-                li.footer-list__item 
+                li.list-item
                     a(href="#").footer-list__link Вакансии
-                li.footer-list__item 
+                li.list-item
                     a(href="#").footer-list__link Инвесторы
         .footer-item 
-            ul.footer-list 
-                h3 служба поддержки
-                li.footer-list__item 
+            ul.list
+                h3.title служба поддержки
+                li.list-item
                     a(href="#").footer-list__link Соглашения
-                li.footer-list__item 
+                li.list-item
                     a(href="#").footer-list__link Сообщества
-                li.footer-list__item 
+                li.list-item
                     a(href="#").footer-list__link Связь с нами
         .footer-item 
-            ul.footer-list 
-                h3 Подписка
-                li.footer-list__item 
-                    a(href="#").footer-list__link Получайте специальные предложения и новости сервиса
+            ul.list 
+                h3.title Подписка
+                li.list-item
+                    p.footer-text Получайте специальные предложения и новости сервиса
+                li.list-item
+                    input#email(type='email' pattern='.+@globex\.com' size='30' required='')
