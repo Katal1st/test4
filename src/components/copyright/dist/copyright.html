@@ -5,15 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copyright</title>
-    <style>.copyright{
-    display:block;
+    <style>@font-face {
+    font-family: 'Montserrat';
+    src:url("../../assets/fonts/Montserrat-Regular.ttf") format('truetype');
+  }
+
+.copyright{
     width: 100%;
+    display: inline-flex;
+}
+
+.text{
+display: block;
+font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+color: rgba(31, 32, 65, 0.75);
+margin-left: 140px;
+}
+
+.social{
+    width: 100%;
+    display: inline-flex;
+}
+
+.icons {
+width: 100%;
+display: flex;
+justify-content: flex-end;
+}
+
+.icon__logo{
+    display: flex;
+    justify-content: flex-end;
 }
     </style>
   </head>
   <body> </body>
   <hr>
   <copyright class="copyright"> 
-    <p class="text">Copyright © 2018 Toxin отель. Все права защищены.<a class="icon" href="#"><img src="src/assets/image/twitter.svg" alt="logo"></a><a class="icon" href="#"><img src="src/assets/image/facebook.svg" alt="logo"></a><a class="icon" href="#"><img src="src/assets/image/instagram.svg" alt="logo"></a></p>
+    <p class="text">Copyright © 2018 Toxin отель. Все права защищены.</p>
+    <ul class="social">
+      <li class="icons"><a class="icon__logo" href="#"><img src="src/assets/image/twitter.svg" alt="logo"></a></li>
+      <li class="icons"><a class="icon__logo" href="#"><img src="src/assets/image/facebook.svg" alt="logo"></a></li>
+      <li class="icons"><a class="icon__logo" href="#"><img src="src/assets/image/instagram.svg" alt="logo"></a></li>
+    </ul>
   </copyright>
 </html>
