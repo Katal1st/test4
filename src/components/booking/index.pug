@@ -1,0 +1,58 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Document
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x' crossorigin='anonymous')
+    link(rel='stylesheet' href='src/components/booking/datepicker/css/datepicker.css')
+  body
+    // http://t1m0n.name/air-datepicker/docs/index-ru.html
+    .container.mt-3
+      .row
+        .col-6.offset-3
+          form
+            input#calendar.form-control(type='text' name='date' data-position='bottom left' )
+            br
+            input#alt.form-control(type='text')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+    script(src='src/components/booking/datepicker/js/datepicker.min.js')
+    script(src='src/components/booking/datepicker/js/i18n/datepicker.en.js')
+    script.
+      $(function() {
+      /*$.fn.datepicker.language['en'] =  {
+      days: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+      daysShort: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+      daysMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
+      months: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+      monthsShort: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+      today: 'Today',
+      clear: 'Clear',
+      dateFormat: 'yyyy/dd/mm',
+      timeFormat: 'hh:ii',
+      firstDay: 0
+      };*/
+      $('#calendar').datepicker({
+      // multipleDates: 2,
+      // multipleDatesSeparator: ' - ',
+      // minDate: new Date(),
+      language: 'ru',
+      // dateFormat: 'yyyy-mm-dd',
+      // firstDay: 0,
+      /*toggleSelected: false,
+      range: true,
+      timepicker: true,
+      minHours: 9,
+      maxHours: 17,
+      minutesStep: 5,*/
+      // view: 'months',
+      clearButton: true,
+      onSelect(formattedDate, date, inst) {
+      inst.hide();
+      // alert(date);
+      },
+      altField: $('#alt'),
+      altFieldDateFormat: 'yyyy-mm-dd'
+      // position: 'bottom left'
+      });
+      });
