@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/components/booking/datepicker/css/datepicker.css">
+    <link rel="stylesheet" href="src/components/booking/item-quantity-dropdown/item-quantity-dropdown.min.css">
+    <import>'item-quantity-dropdown';</import>
+    <import>'src/components/booking/item-quantity-dropdown/item-quantity-dropdown.css';</import>
+    <style>@font-face {
+    font-family: 'Montserrat';
+    src:url("../../assets/fonts/Montserrat-Regular.ttf") format('truetype');
+  }
+
+.form {
+    display: block;
+    position: relative;
+    width: 380px;
+    height: 374px;
+}
+
+.title {
+display:block;
+float: top;
+font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 29px;
+}
+
+.datepicker-from {
+display: block;
+float: left;
+position: absolute;
+width: 150px;
+height: 44px;
+}
+
+.datepicker-to {
+display: flex;
+float: right;
+position: absolute;
+width: 150px;
+height: 44px;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-6 offset-3">
+          <form class="form"></form>
+          <div>
+            <h1 class="title">Найдём номера под ваши пожелания</h1>
+          </div>
+          <div> 
+            <h3>прибытие</h3>
+            <input class="form-control datepicker-from" id="calendar" type="text" name="date" data-position="bottom left" data-range="true" data-multiple-dates-separator=" - ">
+            <h3>выезд</h3>
+            <input class="datepicker-here datepicker-to" type="text">
+          </div>
+          <div>
+            <h3>гости</h3>
+            <select id="selectID">
+              <option value="”GR”">Взрослые</option>
+              <option value="”YE”">Дети</option>
+              <option value="”BL”">Младенцы</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<div class="iqdropdown">
+  <p class="iqdropdown-selection" data-seletion-text="item" data-text-plural="items"></p>
+  <div class="iqdropdown-menu">
+    <div class="iqdropdown-menu-option" data-id="item1">
+      <div></div>
+      <li data-id="item1" data-defaultcount="0" data-mincount="0" data-maxcount="1">
+        <p class="iqdropdown-item">Item 1</p>
+        <p class="iqdropdown-description">A short description</p>
+      </li>
+    </div>
+    <div class="iqdropdown-menu-option" data-id="item2">
+      <div></div>
+      <li data-id="item1" data-defaultcount="0" data-mincount="0" data-maxcount="1">
+        <p class="iqdropdown-item">Item 2</p>
+        <p class="iqdropdown-description">A short description</p>
+      </li>
+    </div>
+    <div class="iqdropdown-menu-option" data-id="item3">
+      <div></div>
+      <li data-id="item1" data-defaultcount="0" data-mincount="0" data-maxcount="1">
+        <p class="iqdropdown-item">Item 3</p>
+        <p class="iqdropdown-description">A short description<br></p>
+      </li>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="src/components/booking/datepicker/js/datepicker.js"></script>
+    <script src="src/components/booking/datepicker/js/i18n/datepicker.en.js"></script>
+    <script src="src/components/booking/item-quantity-dropdown/item-quantity-dropdown.min.js"></script>
+    <script src="src/components/booking/item-quantity-dropdown/dropdown.js"></script>
+    <script>
+      $(document).ready(() => {
+      $('.iqdropdown').iqDropdown({ [ {
+        // max total items
+        maxItems: Infinity,
+        // min total items
+        minItems: 0,
+        // text to show on the dropdown override data-selection-text attribute
+        selectionText: 'item',
+        // text to show for multiple items
+        textPlural: 'items',
+        // optionally can use setSelectionText function to override selectionText
+        setSelectionText: (itemCount, totalItems) => { /* return string */ },
+        // buttons to increment/decrement
+        controls: {
+          position: 'right',
+          displayCls: 'iqdropdown-item-display',
+          controlsCls: 'iqdropdown-item-controls',
+          counterCls: 'counter'
+        },
+        // fires when an item quantity changes
+        onChange: (id, count, totalItems) => {},
+        // return false to prevent an item decrement
+        beforeDecrement: (id, itemCount) => {},
+        // return false to prevent an item increment
+        beforeIncrement: (id, itemCount) => {}
+        `${1000} item` // if total items is 1
+        `${1000} items` // if total items is not 1
+        options.selectionText = 'item';
+        options.textPlural = 'items';
+        options.setSelectionText = function setSelectionText(10, 10000000)
+      } ] } );
+      });
+      $(function() {
+      /*$.fn.datepicker.language['en'] =  {
+      days: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+      daysShort: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+      daysMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
+      months: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+      monthsShort: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+      today: 'Today',
+      clear: 'Clear',
+      dateFormat: 'yyyy/dd/mm',
+      timeFormat: 'hh:ii',
+      firstDay: 0
+      };*/
+      $('#calendar').datepicker({
+      // multipleDates: 2,
+      // multipleDatesSeparator: ' - ',
+       minDate: new Date(),
+      language: 'ru',
+      // dateFormat: 'yyyy-mm-dd',
+      // firstDay: 0,
+      /*toggleSelected: false,
+      range: true,
+      timepicker: true,
+      minHours: 9,
+      maxHours: 17,
+      minutesStep: 5,*/
+      // view: 'months',
+      clearButton: true,
+      onSelect(formattedDate, date, inst) {
+      inst.hide();
+      // alert(date);
+      },
+      altField: $('#alt'),
+      altFieldDateFormat: 'yyyy-mm-dd'
+      // position: 'bottom left'
+      });
+      });
+    </script>
+  </div>
+</div>

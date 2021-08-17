@@ -1,0 +1,26 @@
+{
+  "extends": ["airbnb-base"],
+
+  "env": {
+    "browser": true
+  },
+
+  "rules": {
+    "space-before-function-paren": [2, "always"],
+    "function-paren-newline": [2, "consistent"],
+    "lines-between-class-members": [2, "always"],
+    "quote-props": [2, "consistent-as-needed"],
+    "object-curly-newline": [2, { "consistent": true }],
+    "no-return-assign": [2, "except-parens"],
+    "no-param-reassign": 0,
+    "no-console": 0
+  },
+
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config"
+      }
+    }
+  }
+}

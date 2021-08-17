@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Montserrat';
+    src:url("../../assets/fonts/Montserrat-Regular.ttf") format('truetype');
+  }
+
+.form {
+    display: block;
+    position: relative;
+    width: 380px;
+    height: 374px;
+}
+
+.title {
+display:block;
+float: top;
+font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 29px;
+}
+
+.datepicker-from {
+display: block;
+float: left;
+position: absolute;
+width: 150px;
+height: 44px;
+}
+
+.datepicker-to {
+display: flex;
+float: right;
+position: absolute;
+width: 150px;
+height: 44px;
+}

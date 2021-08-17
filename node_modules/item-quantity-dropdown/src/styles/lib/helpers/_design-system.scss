@@ -1,0 +1,16 @@
+// ColorSystem and fontfamily for the Reservamos theme
+// Each variable inside uses the !default keyword
+
+$primary-font: 'OpenSans', sans-serif !default;
+
+$iqdropdown-fontsize-m: 14px !default;
+$iqdropdown-fontsize-l: 17px !default;
+
+// Color System
+// Primary colors ----------
+$primary-700: #002674 !default;
+
+// GrayScale ----------
+$gray-900: #4A4A4A !default;
+$gray-200: #E2E2E2 !default;
+$gray-100: #EEEEEE !default;
